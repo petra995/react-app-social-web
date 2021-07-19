@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PostsArray from './PostsArray';
 import Pagination from './Pagination.jsx';
+import "./Posts.css";
 const url = 'https://jsonplaceholder.typicode.com/posts'
 const url2 = 'https://jsonplaceholder.typicode.com/comments'
 let p_array = [];
@@ -54,6 +55,8 @@ class Posts extends React.Component {
         this.setState({ curPage: num });
     }
 
+    
+
     render()
     {
         const { error } = this.state;
@@ -66,7 +69,7 @@ class Posts extends React.Component {
             <div className="posts">
                 <h1>News feed</h1>
                 <h2> {error} </h2>
-
+                
                 <PostsArray postsArray={currentPosts} />
                 <Pagination postsPerPage={postsPerPage} totalPosts={p_array.length} paginate={this.update}/>
             </div>
