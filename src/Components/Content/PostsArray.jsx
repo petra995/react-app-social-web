@@ -2,6 +2,7 @@ import React from 'react';
 
 const PostsArray = ({ postsArray }) => {
 
+    
     //console.log(postsArray[1].comments)
     return (
         <div>
@@ -12,8 +13,8 @@ const PostsArray = ({ postsArray }) => {
                     <text>{item.body}</text><br />
                     <small>
                         last comment:<br/>
-                        <strong>{item.comments.name}</strong><br />
-                        {item.comments.body}
+                        <strong>{item.comments[4].name}</strong><br />
+                        {item.comments[4].body}
                     </small>
                 </article>)}
             </ul>
